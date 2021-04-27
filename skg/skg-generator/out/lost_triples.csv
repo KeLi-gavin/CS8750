@@ -1,0 +1,16 @@
+,s,p,o,source,support
+0,vision,read,background music,heuristic,1
+1,vision,read,emotional reinforcement,heuristic,1
+2,scenic spot,read,background music,heuristic,1
+3,scenic spot,read,emotional reinforcement,heuristic,1
+4,immersive poetry learning,read,emotional reinforcement,heuristic,1
+5,multimedia property,read,emotional reinforcement,heuristic,1
+6,music emotion ontology,annotate,context information poetry content,heuristic,2
+7,music emotion ontology,annotate,music emotional property,heuristic,2
+8,poetry noun ontology,annotate,context information poetry content,heuristic,2
+9,context information poetry content,relate,music emotional property,heuristic,1
+10,music emotional property,relate,context information poetry content,heuristic,1
+11,learning context ontology,annotate,context information poetry content,heuristic,2
+12,poetry noun ontology,annotate,music emotional property,heuristic,2
+13,coherent poetry,relate,music,heuristic,1
+14,music,relate,coherent poetry,heuristic,1
