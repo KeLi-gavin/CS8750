@@ -60,9 +60,9 @@ To extract entities and relations from scientific publications our work has been
 1. Go to the directory luanyi-extractor/
 2. Please be sure you have already downloaded and tested the files coming from https://bitbucket.org/luanyi/scierc/src/master/
 
-#### for training and testing LuanYi evaluate ./scierc/singleton.py and ./scierc/evaluator.py
+#### for training and testing LuanYi   Please execuate ./scierc/singleton.py and ./scierc/evaluator.py
 
-donot execuate those two files which under master/ folder
+DONOT execuate those two files which under master/ folder
 
 3. Under master/ create the directories paths data/processed_data/json/ and data/processed_data/elmo/
 4. From data-preparation/ copy the directory **luanyi_input/** to master/data/processed_data/json/
