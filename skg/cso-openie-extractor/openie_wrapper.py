@@ -3,6 +3,8 @@ import datetime
 import json
 import nltk
 import pandas as pd
+from verb_window_finder import VerbWindowFinder
+
 
 
 class OPENIE_wrapper:

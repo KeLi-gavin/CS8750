@@ -14,6 +14,8 @@ import gc
 from stanfordcorenlp import StanfordCoreNLP
 import json
 
+#from openie_wrapper import OPENIE_wrapper
+
 
 
 class VerbWindowFinder:
@@ -23,12 +25,14 @@ class VerbWindowFinder:
 		self.spacy_nlp = spacy.load('en_core_web_sm')
 		self.lemmatizer = spacy.lemmatizer.Lemmatizer(LEMMA_INDEX, LEMMA_EXC, LEMMA_RULES) 
 		self.corenlp = nlp
+		self.nlp = nlp
+		self.stanford_path = r'../stanford-corenlp-full-2018-10-05'  
 
 
 	def restart_nlp(self):
 		self.nlp.close()
 		self.nlp = StanfordCoreNLP(self.stanford_path, memory='6g')
-		self.openie = OPENIE_wrapper(self.nlp)
+		#self.openie = OPENIE_wrapper(self.nlp)
 		self.verb_finder = VerbWindowFinder(self.nlp)
 
 		

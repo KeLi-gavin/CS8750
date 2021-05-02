@@ -196,7 +196,11 @@ if __name__ == '__main__':
 			#add a flag to Luan Yi et al detected relationships
 			luanyi_relations = [(s, 'luanyi-' + p, o) for (s,p,o) in luanyi_relations]
 
+			print(str(n_abstract) + '.' + str(n_sentence))
+			print(sentence)
+			print(cso_result[str(n_abstract) + '.' + str(n_sentence)]['semantic'])
 			cso_entities = cso_result[str(n_abstract) + '.' + str(n_sentence)]['semantic']
+			
 			other_relations = analyzer.analyze(sentence, luanyi_entities + cso_entities)
 			new_entities_list += [list(set(luanyi_entities + cso_entities))]
 			new_relations_list += [luanyi_relations + other_relations]
@@ -214,7 +218,7 @@ if __name__ == '__main__':
 			df.to_csv(file_out)
 
 	df = pd.DataFrame(r_data)
-	df = pd.concat([df_saved, df])
+	df = pd.concat([df_saved, df],sort=True)
 	df.to_csv(file_out)
 	df.to_csv(file_out)
 	analyzer.close()
