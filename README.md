@@ -32,24 +32,27 @@ Our project uses both Python 2.7 and Python 3.6 (ensure you have Python 3.6 or a
 
 ### download
 
-please add /home/cc/skg/luanyi-extractor/master/data/processed_data/elmo/test.hdf5
+please add 
 
-/home/cc/scierc/data/processed_data/elmo/test.hdf5
+./CS8750/skg/luanyi-extractor/master/data/processed_data/elmo/test.hdf5
 
-/home/cc/skg/luanyi-extractor/master/data/processed_data/elmo/train.hdf5
+./CS8750/scierc/data/processed_data/elmo/test.hdf5
 
-/home/cc/scierc/data/processed_data/elmo/train.hdf5
+./CS8750/skg/luanyi-extractor/master/data/processed_data/elmo/train.hdf5
 
-/home/cc/skg/luanyi-extractor/master/embeddings/glove.840B.300d.txt
+./CS8750/scierc/data/processed_data/elmo/train.hdf5
 
-/home/cc/scierc/embeddings/glove.840B.300d.txt
+./CS8750/skg/luanyi-extractor/master/embeddings/glove.840B.300d.txt
 
-/home/cc/skg/luanyi-extractor/master/embeddings/glove_50_300_2.txt
+./CS8750/scierc/embeddings/glove.840B.300d.txt
 
-/home/cc/scierc/embeddings/glove_50_300_2.txt
+./CS8750/cc/skg/luanyi-extractor/master/embeddings/glove_50_300_2.txt
 
-/home/cc/skg/stanford-corenlp-full-2018-10-05/stanford-corenlp-4.2.0-models.jar
+./CS8750/cc/scierc/embeddings/glove_50_300_2.txt
 
+./CS8750/cc/skg/stanford-corenlp-full-2018-10-05/stanford-corenlp-4.2.0-models.jar
+
+and all 20 file_0_input_luanyi.hdf5
 
 ### Extraction with Luan Yi et al. tool
 
@@ -57,9 +60,9 @@ To extract entities and relations from scientific publications our work has been
 1. Go to the directory luanyi-extractor/
 2. Please be sure you have already downloaded and tested the files coming from https://bitbucket.org/luanyi/scierc/src/master/
 
-#### for training and testing LuanYi evaluate ./scierc/singleton.py and ./scierc/evaluator.py
+#### for training and testing LuanYi   Please execuate ./scierc/singleton.py and ./scierc/evaluator.py
 
-donot execuate those two files which under master/ folder
+DONOT execuate those two files which under master/ folder
 
 3. Under master/ create the directories paths data/processed_data/json/ and data/processed_data/elmo/
 4. From data-preparation/ copy the directory **luanyi_input/** to master/data/processed_data/json/
