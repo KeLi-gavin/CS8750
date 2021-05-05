@@ -24,16 +24,14 @@ Generating Knowledge Graphs by Employing Natural Language Processing and Machine
 Some files have been removed form the repository for github limitations on big files. Send an email to danilo_dessi@unica.it (Danilo Dessì) to get a copy of them.
 
 
-## Usage
-Please follow this guide to run the code and reproduce our results. Please contact us because we need to provide extra files that cannot be pushed into the github reporsitory for files limit of 100 MB.
-
 ### Environments
 Our project uses both Python 2.7 and Python 3.6 (ensure you have Python 3.6 or above installed.). Python2.7 is used to run the Luan Yi et al. tool.
 
-### download
+### Downloads
 
-please add 
+Please add 
 
+```
 ./CS8750/skg/luanyi-extractor/master/data/processed_data/elmo/test.hdf5
 
 ./CS8750/scierc/data/processed_data/elmo/test.hdf5
@@ -52,29 +50,21 @@ please add
 
 ./CS8750/cc/skg/stanford-corenlp-full-2018-10-05/stanford-corenlp-4.2.0-models.jar
 
-and all 20 file_0_input_luanyi.hdf5
+All 20 file_x_input_luanyi.hdf5
+```
 
 ### Extraction with Luan Yi et al. tool
 
 To extract entities and relations from scientific publications our work has been built on top of https://arxiv.org/abs/1808.09602
 1. Go to the directory luanyi-extractor/
-2. Please be sure you have already downloaded and tested the files coming from https://bitbucket.org/luanyi/scierc/src/master/
+2. Go to master/
+3. Run 
 
-#### for training and testing LuanYi   Please execuate ./scierc/singleton.py and ./scierc/evaluator.py
-
-DONOT execuate those two files which under master/ folder
-
-3. Under master/ create the directories paths data/processed_data/json/ and data/processed_data/elmo/
-4. From data-preparation/ copy the directory **luanyi_input/** to master/data/processed_data/json/
-5. Create an empty directory luanyi_input/ (same name of above) also under master/data/processed_data/elmo/
-6. Go to master/
-7. Copy the files from the directory use/ to the directory master/
-8. Run 
 ```
 python generate_elmo.py
 ```
 
-9. Run
+4. Run
 ```
 python3 run_luanyi.py
 ```
@@ -85,6 +75,39 @@ The execution will also produce the directory **csv_e_r/** that contains files w
 
 We suggest to run above commands in background since they are very time consuming.
 
+
+### Extraction of CSO entities and Stanford Core NLP relations
+1. Go to the cso-openie-extractor
+2. Copy here the *luanyi_output.csv* previously generated in the directory luanyi-extractor/
+
+#### Delete *cso_result.pkl* (if applicable) 
+
+3. Run
+```
+python3 run_extractors.py
+```
+
+4. The result is a csv file called *csv_e_r_full.csv* which contains all entities and relations extracted by the used tools
+
+
+### Toward the SKG
+This code generates heristic based relations through the window of verbs, and validates entities based on CSO topics, Semantic Web Keywords and statistics. Finally it maps all relations following the taxonomy "SKG_predicates" we defined. 
+
+1. Go to skg-generator
+2. Copy the *csv_e_r_full.csv* in this directory
+
+#### Delete */resources/300model.bin* and */resources/statistics.pickle* (if applicable) 
+
+3. Run
+```
+python3 run.py
+```
+4. At the end the files *selected_triples.csv* and *kg.graphml* will be generated.  The file *selected_triples.csv* contains all triples with other information generated with our method. The file *triples.csv* contains all triples generated without details. The script *to_rdf.py* can be used to generate the rdf and nt files.
+
+
+### Evaluation
+
+The directory evalution contains the scripts we used for performing our evaluation and the manually annotated gold standard.
 
 
 
