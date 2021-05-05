@@ -28,7 +28,7 @@ Reference code : https://github.com/danilo-dessi/skg (Thanks to Danilo Dessì)
 
 - **evaluation/** contains the scripts we used to generate the sample of triples about the semantic web and evaluate our approach.
 
-Some files have been removed form the repository for github limitations on big files. Send an email to danilo_dessi@unica.it (Danilo Dessì) to get a copy of them.
+
 
 
 ## Usage
@@ -36,10 +36,10 @@ Some files have been removed form the repository for github limitations on big f
 ### Environments
 Our project uses both Python 2.7 and Python 3.7. Python2.7 is used to run the Luan Yi et al. tool.
 
-![Requirements List for python2.7 (Luan Yi)](https://github.com/KeLi-gavin/CS8750/blob/master/env_python27.png)
+![Requirements List for python2.7 (Luan Yi)](https://github.com/KeLi-gavin/CS8750/blob/master/env_python27.PNG)
 **Figure 2**: Requirements List for python2.7 (Luan Yi)
 
-![Requirements List for python3.7 (CSO & SKG)](https://github.com/KeLi-gavin/CS8750/blob/master/env_python37.png)
+![Requirements List for python3.7 (CSO & SKG)](https://github.com/KeLi-gavin/CS8750/blob/master/env_python37.PNG)
 **Figure 3**: Requirements List for python3.7 (CSO & SKG)
 
 ### Downloads
@@ -96,21 +96,6 @@ python3 run_extractors.py
 ```
 
 4. The result is a csv file called *csv_e_r_full.csv* which contains all entities and relations extracted by the used tools
-
-
-### Toward the SKG
-This code generates heristic based relations through the window of verbs, and validates entities based on CSO topics, Semantic Web Keywords and statistics. Finally it maps all relations following the taxonomy "SKG_predicates" we defined. 
-
-1. Go to skg-generator
-2. Copy the *csv_e_r_full.csv* in this directory
-
-#### Delete */resources/300model.bin* and */resources/statistics.pickle* (if applicable) 
-
-3. Run
-```
-python3 run.py
-```
-4. At the end the files *selected_triples.csv* and *kg.graphml* will be generated.  The file *selected_triples.csv* contains all triples with other information generated with our method. The file *triples.csv* contains all triples generated without details. The script *to_rdf.py* can be used to generate the rdf and nt files.
 
 
 ### Toward the SKG
