@@ -44,6 +44,7 @@ Our project uses both Python 2.7 and Python 3.7. Python2.7 is used to run the Lu
 
 ### Downloads
 
+
 Please add 
 
 ```
@@ -95,6 +96,21 @@ python3 run_extractors.py
 ```
 
 4. The result is a csv file called *csv_e_r_full.csv* which contains all entities and relations extracted by the used tools
+
+
+### Toward the SKG
+This code generates heristic based relations through the window of verbs, and validates entities based on CSO topics, Semantic Web Keywords and statistics. Finally it maps all relations following the taxonomy "SKG_predicates" we defined. 
+
+1. Go to skg-generator
+2. Copy the *csv_e_r_full.csv* in this directory
+
+#### Delete */resources/300model.bin* and */resources/statistics.pickle* (if applicable) 
+
+3. Run
+```
+python3 run.py
+```
+4. At the end the files *selected_triples.csv* and *kg.graphml* will be generated.  The file *selected_triples.csv* contains all triples with other information generated with our method. The file *triples.csv* contains all triples generated without details. The script *to_rdf.py* can be used to generate the rdf and nt files.
 
 
 ### Toward the SKG
