@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="https://swkg.kmi.open.ac.uk/relation/skos:broader/is/"
+   xmlns:ns2="https://swkg.kmi.open.ac.uk/relation/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/emotional_reinforcement">
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/multimedia_property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/background_music">
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/vision"/>
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/emotional_reinforcement"/>
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/multimedia_property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/learner_context">
+    <ns2:produces rdf:resource="https://swkg.kmi.open.ac.uk/entity/music"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/reading_with_occasional_poetry">
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/multimedia_property"/>
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/vision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/scenic_spot">
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/multimedia_property"/>
+    <ns1:hyponym-of rdf:resource="https://swkg.kmi.open.ac.uk/entity/vision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/ontology_based_immersive_poetry_learning_system">
+    <ns2:produces rdf:resource="https://swkg.kmi.open.ac.uk/entity/music"/>
+    <ns2:uses rdf:resource="https://swkg.kmi.open.ac.uk/entity/learner_context"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/context_information_poetry_content">
+    <ns2:uses rdf:resource="https://swkg.kmi.open.ac.uk/entity/music_emotion_ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/immersive_poetry_learning">
+    <ns2:uses rdf:resource="https://swkg.kmi.open.ac.uk/entity/music_emotion_ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/music_emotional_property">
+    <ns2:uses rdf:resource="https://swkg.kmi.open.ac.uk/entity/music_emotion_ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/learning_context_ontology">
+    <ns2:produces rdf:resource="https://swkg.kmi.open.ac.uk/entity/immersive_poetry_learning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://swkg.kmi.open.ac.uk/entity/coherent_poetry">
+    <ns2:uses rdf:resource="https://swkg.kmi.open.ac.uk/entity/ontology_based_immersive_poetry_learning_system"/>
+  </rdf:Description>
+</rdf:RDF>
